@@ -10,7 +10,7 @@ dir=`dirname $0`
 echo "1..4"
 
 nx=`namegen_max`
-nxx="${nx}x"
+nxx="${nx}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 expect 0 mkdir ${nx} 0755
 expect 0 rmdir ${nx}

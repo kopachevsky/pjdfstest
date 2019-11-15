@@ -10,7 +10,7 @@ dir=`dirname $0`
 echo "1..10"
 
 nx=`dirgen_max`
-nxx="${nx}x"
+nxx="${nx}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 mkdir -p "${nx%/*}"
 

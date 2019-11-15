@@ -12,7 +12,7 @@ require chflags
 echo "1..12"
 
 nx=`namegen_max`
-nxx="${nx}x"
+nxx="${nx}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 expect 0 create ${nx} 0644
 expect 0 chflags ${nx} SF_IMMUTABLE

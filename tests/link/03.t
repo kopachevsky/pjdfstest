@@ -11,7 +11,7 @@ echo "1..13"
 
 n0=`namegen`
 nx=`dirgen_max`
-nxx="${nx}x"
+nxx="${nx}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 mkdir -p "${nx%/*}"
 

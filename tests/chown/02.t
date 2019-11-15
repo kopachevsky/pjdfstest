@@ -10,7 +10,7 @@ dir=`dirname $0`
 echo "1..10"
 
 nx=`namegen_max`
-nxx="${nx}x"
+nxx="${nx}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 expect 0 create ${nx} 0644
 expect 0 chown ${nx} 65534 65534

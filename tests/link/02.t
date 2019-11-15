@@ -11,7 +11,7 @@ echo "1..10"
 
 n0=`namegen`
 nx=`namegen_max`
-nxx="${nx}x"
+nxx="${nx}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 expect 0 create ${nx} 0644
 expect 0 link ${nx} ${n0}
