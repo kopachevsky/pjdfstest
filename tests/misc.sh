@@ -149,7 +149,7 @@ dirgen_max()
 	complen=$((name_max/2))
 	path_max=`${fstest} pathconf . _PC_PATH_MAX`
 	# "...including the terminating null character."
-	path_max=$((path_max-1))
+	path_max=$((path_max-100))
 
 	name=""
 	while :; do

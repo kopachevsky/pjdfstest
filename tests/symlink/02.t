@@ -11,7 +11,7 @@ echo "1..7"
 
 n0=`namegen`
 nx=`namegen_max`
-nxx="${nx}x"
+nxx="${nx}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 expect 0 symlink ${nx} ${n0}
 expect 0 unlink ${n0}

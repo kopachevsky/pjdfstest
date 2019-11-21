@@ -17,3 +17,7 @@ Makefile
 Makefile.in
 .deps
 *.o
+.idea/
+..gitignore.swp
+.build.sh.swp
+

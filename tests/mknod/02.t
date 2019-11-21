@@ -12,7 +12,7 @@ require mknod
 echo "1..12"
 
 nx=`namegen_max`
-nxx="${nx}x"
+nxx="${nx}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 expect 0 mknod ${nx} f 0644 0 0
 expect fifo,0644 stat ${nx} type,mode

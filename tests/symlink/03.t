@@ -11,7 +11,7 @@ echo "1..6"
 
 n0=`namegen`
 nx=`dirgen_max`
-nxx="${nx}x"
+nxx="${nx}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 mkdir -p "${nx%/*}"
 expect 0 symlink ${nx} ${n0}
