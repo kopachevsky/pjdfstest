@@ -10,7 +10,7 @@ dir=`dirname $0`
 echo "1..4"
 
 nx=`namegen_max`
-nxx="${nx}xnxx="${nx}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+nxx="${nx}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 
 expect 0 open ${nx} O_CREAT 0620
