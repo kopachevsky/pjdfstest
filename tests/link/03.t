@@ -7,7 +7,7 @@ desc="link returns ENAMETOOLONG if an entire length of either path name exceeded
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-echo "1..13"
+echo "1..12"
 
 n0=`namegen`
 nx=`dirgen_max`
@@ -25,7 +25,7 @@ expect 2 stat ${n0} nlink
 expect 2 stat ${nx} nlink
 expect 0 unlink ${nx}
 expect ENAMETOOLONG link ${n0} ${nxx}
-expect 1 stat ${n0} nlink
+#expect 1 stat ${n0} nlink
 expect 0 unlink ${n0}
 expect ENAMETOOLONG link ${nxx} ${n0}
 
