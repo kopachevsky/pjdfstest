@@ -26,7 +26,7 @@ expect EACCES -u 65534 -g 65533,65534 -- chown ${n1}/${n2} -1 65534
 expect EACCES -u 65534 -g 65533,65534 -- lchown ${n1}/${n2} -1 65534
 expect 0 chmod ${n1} 0755
 expect 65534,65533 -u 65534 -g 65534 stat ${n1}/${n2} uid,gid
-expect 0 -u 65534 -g 65533,65534 -- chown ${n1}/${n2} -1 65534
+expect 0 -u 65534 -g 65534 -- chown ${n1}/${n2} -1 65534
 expect 65534,65534 -u 65534 -g 65534 stat ${n1}/${n2} uid,gid
 expect 0 -u 65534 -g 65533,65534 -- lchown ${n1}/${n2} -1 65533
 expect 65534,65533 -u 65534 -g 65533 stat ${n1}/${n2} uid,gid

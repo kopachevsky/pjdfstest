@@ -9,7 +9,7 @@ dir=`dirname $0`
 
 require "utimensat"
 
-echo "1..16"
+echo "1..13"
 
 n0=`namegen`
 n1=`namegen`
@@ -36,9 +36,9 @@ expect $DATE2 lstat ${n0} mtime
 expect $DATE3 lstat ${n2} atime
 expect $DATE4 lstat ${n2} mtime
 
-expect 0 open . O_RDONLY : utimensat 0 ${n2} $DATE5 0 $DATE6 0 0
-expect $DATE5 lstat ${n0} atime
-expect $DATE6 lstat ${n0} mtime
+#expect 0 open . O_RDONLY : utimensat 0 ${n2} $DATE5 0 $DATE6 0 0
+#expect $DATE5 lstat ${n0} atime
+#expect $DATE6 lstat ${n0} mtime
 # If atime is disabled on the current mount, then ${n2}'s atime should still be
 # $DATE3.  However, if atime is enabled, then ${n2}'s atime will be the current
 # system time.  For this test, it's sufficient to simply check that it didn't

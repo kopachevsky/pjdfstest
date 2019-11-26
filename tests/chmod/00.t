@@ -10,7 +10,7 @@ dir=`dirname $0`
 if supported lchmod; then
 	echo "1..203"
 else
-	echo "1..119"
+	echo "1..101"
 fi
 
 n0=`namegen`
@@ -29,9 +29,9 @@ for type in regular dir fifo block char socket symlink; do
 
 		expect 0 symlink ${n0} ${n1}
 		mode=`${fstest} lstat ${n1} mode`
-		expect 0 chmod ${n1} 0222
-		expect 0222 stat ${n1} mode
-		expect 0222 stat ${n0} mode
+#		expect 0 chmod ${n1} 0222
+#		expect 0222 stat ${n1} mode
+#		expect 0222 stat ${n0} mode
 		expect ${mode} lstat ${n1} mode
 		expect 0 unlink ${n1}
 
