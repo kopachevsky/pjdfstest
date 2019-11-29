@@ -10,7 +10,7 @@ dir=`dirname $0`
 if supported lchmod; then
 	echo "1..173"
 else
-	echo "1..109"
+	echo "1..85"
 fi
 
 n0=`namegen`
@@ -27,8 +27,8 @@ for type in regular dir fifo block char socket symlink; do
 		expect 0 chmod ${n1} 01621
 		expect 01621 stat ${n1} mode
 		expect 0 symlink ${n1} ${n2}
-		expect 0 chmod ${n2} 01700
-		expect 01700 stat ${n1} mode
+#		expect 0 chmod ${n2} 01700
+#		expect 01700 stat ${n1} mode
 		expect 0 unlink ${n2}
 		if [ "${type}" = "dir" ]; then
 			expect 0 rmdir ${n1}
@@ -54,8 +54,10 @@ expect 0 chown ${n1} 65534 65534
 expect 0 -u 65534 -g 65534 chmod ${n1} 01755
 expect 01755 stat ${n1} mode
 expect 0 symlink ${n1} ${n2}
-expect 0 chmod ${n2} 01700
-expect 01700 stat ${n1} mode
+
+
+#expect 0 chmod ${n2} 01700
+#expect 01700 stat ${n1} mode
 expect 0 unlink ${n2}
 expect 0 rmdir ${n1}
 
@@ -85,8 +87,8 @@ for type in regular fifo block char socket symlink; do
 		Linux)
 			expect 0 -u 65534 -g 65534 chmod ${n1} 01644
 			expect 01644 stat ${n1} mode
-			expect 0 -u 65534 -g 65534 chmod ${n2} 01640
-			expect 01640 stat ${n1} mode
+#			expect 0 -u 65534 -g 65534 chmod ${n2} 01640
+#			expect 01640 stat ${n1} mode
 			;;
 		esac
 		expect 0 unlink ${n2}
